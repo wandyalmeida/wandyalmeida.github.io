@@ -1,0 +1,43 @@
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+img.wandy {
+    border-left: 5px solid #00d2df ;
+    filter: opacity(60%);
+    transition: 0.5s;
+    width: 200px;
+    margin-left: -50%;
+    margin-top: -50%;
+}
+
+img.wandy:hover{
+    filter: none;
+}
+
+p.text{
+    display: block;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #00cc99;
+    border-radius: 50px;
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: bisque;
+    border-radius: 50px;
+}

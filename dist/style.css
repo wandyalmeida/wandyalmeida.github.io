@@ -6,23 +6,48 @@
     float: left;
 }
 
-img.wandy {
+.wandy{
+    min-width: 30%;
+    height: 0;  
+}
+
+.wandy img {
     border-left: 5px solid #00d2df ;
     filter: opacity(60%);
     transition: 0.5s;
     width: 200px;
-    margin-left: -50%;
-    margin-top: -50%;
+        
+    /* margin-right: -50%; */
+    /* margin-top: -50%; */ 
 }
 
-img.wandy:hover{
-    filter: none;
+.wandy img:hover{
+    filter: opacity(90%);
+    border-left: 5px solid rgba(101, 24, 180, 1);
 }
 
 p.text{
     display: block;
     margin-top: 15px;
     text-align: justify;
+    margin-left: 50px;
+}
+
+.color-portfolio{
+    background-color: bisque;
+    box-shadow: 0px 0px 8px 8px rgba(10, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.portfolio{
+    color: black;
+}
+
+.img-portfolio{
+    /* /* width: 650px; */
+    height: 350px; 
+    width: 100%;
+    
 }
 
 /* Scroll bar */
@@ -41,3 +66,55 @@ p.text{
     background: bisque;
     border-radius: 50px;
 }
+
+
+  @media only screen and (max-width: 1325px) {
+    .img-portfolio{
+        width: 100%;
+    }
+    .wandy img{
+        max-width: 80%;
+        margin-top: -20%;
+        /* margin-left: -20%; */
+        /* display: none; */
+    }
+
+
+    .text-div{
+        margin-top: 25%;
+    }
+    .section{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 22% 0;
+        text-align: center;
+        height: 80%;
+    }
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .img-portfolio{
+        width: 100%;
+        height: auto;
+        
+    }
+    .wandy img{
+        max-width: 80%;
+        /* display: none; */
+    }
+
+
+    .text-div{
+        margin-top: 60%;
+    }
+    .section{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 22% 0;
+        text-align: center;
+        height: 100%;
+    }
+  }

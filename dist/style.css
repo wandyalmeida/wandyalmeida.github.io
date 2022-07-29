@@ -6,6 +6,126 @@
     float: left;
 }
 
+body{
+    overflow-x: hidden;
+    
+}
+/* .main-top{
+    width: 100%;
+    /* padding: 100%; */
+/* } */
+
+.button_icon{
+    margin-right: 15px;
+    
+}
+
+.button{
+    text-decoration: none;
+    color: #090909;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, 
+                -6px -6px 12px #fff;
+}
+
+.button:hover {
+    box-shadow: -6px -6px 12px #c5c5c5,
+                6px 6px 12px #fff;
+}
+
+.main-button{
+    margin: 35px;
+    display: block;
+    
+    
+}
+
+.icons{
+    display: flex;
+    column-gap: 25px;
+    justify-content: center;
+    margin: 15px;
+    
+    
+}
+
+.icon{
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+}
+
+.icon:hover{
+    outline-offset: 4px;
+}
+
+.icon:hover i{
+    animation: shake .25s;
+}
+
+
+
+.icon--instagram:hover{
+    background-image: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    outline-color: #a02d76;
+    color: #fff;
+}
+
+.icon--linkedin:hover{
+    background-color: #0077b5;
+    outline-color: #0077b5;
+    color: #fff;
+}
+
+.icon--github:hover{
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+    color: #fff;
+}
+
+@keyframes shake {
+    10%{transform: rotate(15deg);}
+    20%{transform: rotate(-15deg);}
+    30%{transform: rotate(15deg);}
+    40%{transform: rotate(-15deg);}
+}
+
+.wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    transition: opacity 1s, visibility 1s;
+
+}
+
+.fade {
+    opacity: 0;
+    visibility: hidden;
+    background-color: #000;
+}
+
 .wandy{
     min-width: 30%;
     height: 0;  
@@ -34,7 +154,7 @@ p.text{
 }
 
 .color-portfolio{
-    background-color: bisque;
+    background-color: rgb(212, 196, 255);
     box-shadow: 0px 0px 8px 8px rgba(10, 0, 0, 0.6);
     border-radius: 5px;
 }
@@ -44,10 +164,54 @@ p.text{
 }
 
 .img-portfolio{
-    /* /* width: 650px; */
-    height: 350px; 
-    width: 100%;
+    height: 350px;  
+    width: 100%; 
     
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.pro div {
+    text-align: center;
+}
+
+.hidden{
+    opacity: 0;
+    display: none;
+    transition: 1000ms;
+}
+
+.see_more{
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 93px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+button { 
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, 
+                -6px -6px 12px #fff;
+}
+
+button:hover {
+    box-shadow: -6px -6px 12px #c5c5c5,
+                6px 6px 12px #fff;
 }
 
 /* Scroll bar */
@@ -69,8 +233,18 @@ p.text{
 
 
   @media only screen and (max-width: 1325px) {
-    .img-portfolio{
+    /* .img-portfolio{
+        max-width: 300px;
+    } */
+
+    /* .main-top{
         width: 100%;
+        padding: 100%;
+    } */
+
+    body{
+        overflow-x: unset;
+        
     }
     .wandy img{
         max-width: 80%;
@@ -81,7 +255,7 @@ p.text{
 
 
     .text-div{
-        margin-top: 25%;
+        margin-top: 10%;
     }
     .section{
         flex-direction: column;
@@ -95,11 +269,26 @@ p.text{
 
 
   @media only screen and (max-width: 768px) {
+    
+    body{
+        overflow-y: scroll;
+        overflow-x:unset;
+        
+    }
+    /* .main{
+        width: 150%;
+        /* visibility: hidden; */
+        /* background-color: #000;
+        overflow-x:hidden;
+        animation: none; */
+    /* } */
+
     .img-portfolio{
-        width: 100%;
+        /* width: 100%; */
         height: auto;
         
     }
+    
     .wandy img{
         max-width: 80%;
         /* display: none; */
@@ -117,4 +306,5 @@ p.text{
         text-align: center;
         height: 100%;
     }
+    
   }

@@ -279,7 +279,15 @@ p.text{
         margin-top: 60%;
     }
     .section{
-        height: 120%;
+        height: 100%;
+    }
+    
+  }
+
+  @media (max-width: 380px) {
+    
+    .section{
+        height: 125%;
     }
     
   }

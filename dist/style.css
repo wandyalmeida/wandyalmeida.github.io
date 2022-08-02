@@ -260,6 +260,22 @@ p.text{
     
   }
 
+  @media (max-width: 868px) {
+    
+    .text-div{
+        margin-top: 25%;
+    }
+    .section{
+        height: 200%;
+    }
+
+    .icon{
+        border-radius: 50%;
+    
+    }
+    
+  }
+
   @media (max-width: 768px) {
     
     .img-portfolio{

@@ -6,10 +6,6 @@
     float: left;
 }
 
-body{
-    overflow-x: hidden;
-    
-}
 
 .button_icon{
     margin-right: 15px;
@@ -132,7 +128,7 @@ body{
     border-left: 5px solid #00d2df ;
     filter: opacity(60%);
     transition: 0.5s;
-    width: 200px;
+    /* width: 200px; */
 }
 
 .wandy img:hover{
@@ -243,18 +239,18 @@ p.text{
         align-items: center;
         padding: 22% 0;
         text-align: center;
-        height: 80%;
+        height: 200%;
     }
   }
 
 
-  @media (max-width: 880px) {
+  @media (max-width: 1000px) {
     
     .text-div{
         margin-top: 25%;
     }
     .section{
-        height: 200%;
+        height: 80%;
     }
 
     .icon{
@@ -283,3 +279,14 @@ p.text{
     }
     
   }
+
+  @media (max-width: 667px) {
+    .text-div{
+        margin-top: 70%;
+    }
+    .section{
+        height: 155%;
+    }
+    
+  }
+    

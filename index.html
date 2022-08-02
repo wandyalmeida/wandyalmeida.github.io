@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
         <meta name="my_portfolio" content="create my portfolio" />
         <meta name="wandwilon" content="my portfolio" />
         <title>W.A</title>
@@ -24,7 +24,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     </head>
-    <body id="page-top">
+    <body id="page-top" style="overflow-x: hidden;">
         <!-- Navigation-->
         <div class="fixed-top"  data-aos="fade-up">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -56,7 +56,7 @@
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5" style="font-size: 25px;">I'm <span class="auto-type" ></span></p>
                         <!-- <a class="btn btn-primary btn-xl" href="#about">Find Out More</a> -->
-                        <div class="text-center">
+                        <div class="text-center" data-aos="fade-down">
                             <a  class="button" href="https://www.linkedin.com/in/wandwilson-almeida-079156175/" target="_blank"><i class="button_icon ri-linkedin-line"></i>LinkedIn</a>
                             <a  class="button" href="https://github.com/wandyalmeida" target="_blank"><i class="button_icon ri-github-line"></i>GitHub</a>
                         </div>
@@ -69,7 +69,7 @@
            
             <div class="container px-4 px-lg-5">
                         <div class="wandy" data-aos="fade-right">
-                            <img src="dist/assets/img/wandy.jpg"
+                            <img style="width: 200px;" src="dist/assets/img/wandy.jpg"
                             alt="Myself">
                         </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -224,7 +224,7 @@
         </section> -->
         <!-- Contact-->
         <section class="page-section bg-dark text-white" id="contact">
-            <div class="container px-4 px-lg-5">
+            <div class="container px-4 px-lg-5" data-aos="fade-up">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
                         <h2 class="mt-0">Let's Get In Touch!</h2>
@@ -241,29 +241,29 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm" onsubmit="sendEmail(); reset(); return false">
                             <!-- Name input-->
                             <div class="form-floating text-muted mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." required />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input -->
                             <div class="form-floating text-muted mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" required />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating text-muted mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" required />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating text-muted mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
@@ -285,7 +285,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div> 
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disable" id="submitButton" type="submit">Submit</button></div> 
                         </form>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                     </div>
                 </div>
             </div>
-            <div class="icons">
+            <div class="icons" data-aos="fade-up">
                 <a href="https://www.instagram.com/wandwilson.almeida/" target="_blank" class="icon icon--instagram">
                     <i class="ri-instagram-line"></i>
                 </a>
@@ -330,7 +330,9 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+       
+       <script>
            
             AOS.init({
                 duration: 1000,
@@ -342,7 +344,20 @@
                 
                 
             });
+            function sendEmail(){
+                Email.send({
+                    SecureToken : "4eb02015-ff65-40b8-9efa-2d0212e511a9",
+                    To : 'wandwilson.almeida@hotmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : "New oportunity",
+                    Body : "Name: " + document.getElementById("name").value
+                        + "<br> Email: " + document.getElementById("email").value
+                        + "<br> Phone no : " + document.getElementById("phone").value
+                        + "<br> Message: " + document.getElementById("message").value 
+                    }).then(
+                        message => alert("Form submission successful!")
+                        )};
         </script>
-
+        
     </body>
 </html>

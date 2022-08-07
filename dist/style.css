@@ -35,6 +35,59 @@
                 6px 6px 12px #fff;
 }
 
+.button-visit{
+    text-decoration: none;
+    color: #090909;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    /*margin-bottom: 0; */
+    width: 176.52px;
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    visibility: hidden;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, 
+                -6px -6px 12px #fff;
+}
+
+.button-visit:hover {
+    box-shadow: -6px -6px 12px #c5c5c5,
+                6px 6px 12px #fff;
+}
+
+/* .card{
+    height: 350px;  
+     
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background: white;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    position: center;
+    transition: all .4s;
+} */
+/* .card img{
+    height: 350px;  
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    cursor: pointer;
+    z-index: 10;
+    transition: all .4s;
+    
+    
+} */
+/* .pro:hover img{
+    margin-top: -30px;
+} */
+
+
+
 
 .main-button{
     margin: 35px;
@@ -159,6 +212,7 @@ p.text{
     
 }
 
+
 .projects{
     display: flex;
     flex-wrap: wrap;
@@ -168,6 +222,101 @@ p.text{
 
 .pro div {
     text-align: center;
+    border-radius: 20px;
+    
+}
+
+
+.card {
+    
+    height: 350px;  
+    /* width: 100%;  */
+    background-color: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s ease;
+    backface-visibility: hidden;
+}
+
+.card:hover {
+    transform: scale(.9);
+}
+
+/* .card:hover::after{
+    height: 280px;
+} */
+
+.card:hover .con-text p{
+    margin-bottom: 0px;
+    opacity: 1;
+}
+
+/* .card:hover img{
+    transform: scale(1.25);
+} */
+
+.card:after {
+    width: 100%;
+    content: '';
+    left: 0px;
+    bottom: 0px;
+    height: 150px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    z-index: 20;
+    transition: all .25s ease;
+}
+
+.card img{
+    /* height: 100%; */
+    z-index: 10;
+    transition: all .25s ease;
+}
+
+.card .con-text{
+    z-index: 30;
+    position: absolute;
+    bottom: 0px;
+    color: #fff;
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-left: -50%;
+}
+
+.card .con-text p {
+    font-size: .8rem;
+    opacity: 0;
+    margin-bottom: -170px;
+    transition: all .25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.card .con-text p .btn{
+    padding:  7px 17px;
+    border-radius: 12px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: auto;
+    transition: all .25s ease;
+    font-family: poppins;
+    font-size: 15px;
+    outline: none;
+}
+
+.card .con-text p .btn:hover{
+    background: #fff;
+    color: #000;
 }
 
 .hidden{
@@ -229,6 +378,11 @@ p.text{
         margin-top: -20%;
     }
 
+    .img-portfolio2{
+        height: 350px;  
+        width: 100%; 
+        
+    }
 
     .text-div{
         margin-top: 20%;

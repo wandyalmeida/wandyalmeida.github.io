@@ -254,23 +254,26 @@ p.text{
 .card:hover .con-text p{
     margin-bottom: 0px;
     opacity: 1;
+    /* background-color: rgb(10 0 0 / 60%); */
 }
 
 /* .card:hover img{
     transform: scale(1.25);
 } */
 
-.card:after {
+/* .card:after {
     width: 100%;
     content: '';
     left: 0px;
     bottom: 0px;
     height: 150px;
     position: absolute;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 1) 100%);
     z-index: 20;
     transition: all .25s ease;
-}
+    background-color: rgb(10 0 0 / 60%);
+} */
+
 
 .card img{
     /* height: 100%; */
@@ -279,6 +282,7 @@ p.text{
 }
 
 .card .con-text{
+    width: 150%;
     z-index: 30;
     position: absolute;
     bottom: 0px;
@@ -286,6 +290,9 @@ p.text{
     padding: 20px;
     padding-bottom: 30px;
     margin-left: -50%;
+    background-color: rgb(10 0 0 / 60%);
+    border-radius: 0%;
+    
 }
 
 .card .con-text p {
@@ -298,6 +305,8 @@ p.text{
     justify-content: flex-end;
     flex-direction: column;
     font-size: 15px;
+    
+    
 }
 
 .card .con-text p .btn{
@@ -307,7 +316,7 @@ p.text{
     border: 2px solid #fff;
     color: #fff;
     margin-top: 10px;
-    margin-left: auto;
+    margin-left: 170px;
     transition: all .25s ease;
     font-family: poppins;
     font-size: 15px;
@@ -317,6 +326,7 @@ p.text{
 .card .con-text p .btn:hover{
     background: #fff;
     color: #000;
+    box-shadow: 0px 0px 8px 8px rgb(10 0 0 / 60%);
 }
 
 .hidden{
@@ -383,6 +393,11 @@ p.text{
         width: 100%; 
         
     }
+    .img-portfolio{
+        height: 350px;  
+        width: 100%; 
+        
+    }
 
     .text-div{
         margin-top: 20%;
@@ -411,6 +426,11 @@ p.text{
         border-radius: 50%;
     
     }
+    .img-portfolio{
+        height: 350px;  
+        /* width: 100%;  */
+        
+    }
     
   }
 
@@ -426,6 +446,11 @@ p.text{
     .icon{
         border-radius: 50%;
     
+    }
+    .img-portfolio{
+        height: 350px;  
+        /* width: 100%;  */
+        
     }
     
   }
@@ -447,6 +472,11 @@ p.text{
     .section{
         height: 125%;
     }
+    .img-portfolio{
+        height: 350px;  
+        /* width: 100%;  */
+        
+    }
     
   }
 
@@ -456,6 +486,11 @@ p.text{
     }
     .section{
         height: 155%;
+    }
+    .img-portfolio{
+        height: 350px;  
+        /* width: 100%;  */
+        
     }
     
   }

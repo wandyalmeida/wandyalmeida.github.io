@@ -297,10 +297,10 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
+/* img,
 svg {
   vertical-align: middle;
-}
+} */
 
 table {
   caption-side: bottom;
@@ -4089,7 +4089,7 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }

@@ -1,5 +1,4 @@
-
-
+// Type animation
 const typed = new Typed(".auto-type", {
     strings: ["Developer Front-END", "Freelancer"],
     typeSpeed: 75,
@@ -7,6 +6,14 @@ const typed = new Typed(".auto-type", {
     loop: true
 })
 
+// nav Menu
+const navMenu = document.querySelector("#navMenu");
+
+navMenu.addEventListener("click", () => {
+   navMenu.classList.toggle("active");
+});
+
+// See more button
 const bnt = document.querySelector('.see-more');
 const see_more = document.querySelector('.hidden');
 
@@ -24,11 +31,14 @@ bnt.addEventListener('click', function() {
 
 });
 
-
-const fadeOut = {
-   
+// Loader
+const fadeOut = () => {
+   const loaderWrapper =
+   document.querySelector('.wrapper');
+   loaderWrapper.classList.add('fade');
 }
-      const loaderWrapper =
-      document.querySelector('.wrapper');
-      loaderWrapper.classList.add('fade');
+     
 window.addEventListener('load', fadeOut);
+
+
+

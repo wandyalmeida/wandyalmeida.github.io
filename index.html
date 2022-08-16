@@ -26,6 +26,7 @@
 
     </head>
     <body id="page-top" style="overflow-x: hidden;">
+        
         <!-- Navigation-->
         <div class="fixed-top"  data-aos="fade-up">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -33,7 +34,7 @@
                 <!--<a class="navbar-brand" style="height: 20px;" href="#page-top"><img style="width: 35px; margin-top: -25px;" src="assets/wan1.png" alt="#"></a>-->
                 <a class="navbar-brand" href="#page-top">&lsaquo;Wandwilson Almeida/&rsaquo;</a>
                 
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler navbar-toggler-right" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -69,20 +70,20 @@
         <section class="page-section section bg-dark" id="about" >
            
             <div class="container px-4 px-lg-5">
-                        <div class="wandy" data-aos="fade-right">
+                        <div class="about" data-aos="fade-right">
                             <img style="width: 200px;" src="dist/assets/img/wandy.jpg"
                             alt="Myself">
                         </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     
-                    <div class="col-lg-8 text-center text-div " data-aos="fade-left">
+                    <div class="col-lg-8 text-center text-div " data-aos="fade-down">
                      
                         <h2 class="text-white mt-0" >About me</h2>
                         <hr class="divider divider-light" />
                         <p class="text text-white-75 mb-4">Hi my name is Wandwilson Almeida, I am a student at CCT College Dublin, I started studying technology since 2012 but was not with programming just maintenance of computers and laptops, but when the pandemic came my last flatmate showed me how powerful programming is and develop websites</p>
                         
                         <!--<a class="btn btn-light btn-xl" href="#services">Get Started!</a>-->
-                        <div class="text-center">
+                        <div class="text-center" data-aos="fade-up">
                             <a  class="button" href="dist/resume/Wandwilson_Almeida.pdf" download=""><i class="button_icon ri-cloud-line"></i>Resume</a>
                             <a  class="button" href="#contact"><i class="button_icon ri-send-plane-line"></i>Contact</a>
                         </div>
@@ -136,9 +137,9 @@
             <div class="container-fluid py-3 color-portfolio">
                 <h2 class="portfolio mt-2 text-center">Portfolio</h2>
                     <hr class="divider" />
-                <div class="projects" data-aos="fade-left">
+                <div class="projects" data-aos="fade-right" >
                     
-                    <div class="col-lg-4 col-sm-6 pro card">
+                    <div class="col-lg-4 col-sm-6 pro card" >
                         <a class="portfolio-box" href="dist/assets/img/portfolio/fullsize/doce_familia.png" title="Doce familia Website">
                             
                             <img class="img-portfolio2" src="dist/assets/img/portfolio/thumbnails/doce.png" alt="Doce familia Website" />
@@ -352,15 +353,18 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
        
+			
+		
        <script>
-           
+			
             AOS.init({
                 duration: 1000,
                 mirror: true,
                 // disable: 'mobile'
-                disable: window.innerWidth < 1325 || window.innerWidth < 768,
+                // disable: window.innerWidth < 1325 || window.innerWidth < 768,
                 
-
+            
+		
                 
                 
             });
@@ -377,6 +381,7 @@
                     }).then(
                         message => alert("Form submission successful!")
                         )};
+
         </script>
         
     </body>

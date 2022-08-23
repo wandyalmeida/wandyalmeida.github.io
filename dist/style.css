@@ -33,7 +33,7 @@
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background-color: #fff;
+    background-color: #000;
     display: grid;
     place-items: center;
     transition: opacity 1s, visibility 1s;
@@ -45,6 +45,49 @@
     visibility: hidden;
 }
 
+.button-sub{
+    position: relative;
+    text-decoration: none;
+    color: #090909;
+    margin-left: 30px;
+    margin-right: 30px;  
+    height: 50px;
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, 
+                -6px -6px 12px #fff;
+}
+
+.button-sub:hover {
+    box-shadow: -6px -6px 12px #c5c5c5,
+                6px 6px 12px #fff;
+}
+
+.button-sub *{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+.btn-icon{
+    opacity: 0;
+}
+
+.button-sub:focus .text-btn{
+    opacity: 0;
+}
+
+.button-sub:focus .btn-icon{
+    opacity: 1;
+    transition-delay: .5s;
+}
 .principal {
     display: flex;
     justify-content: space-around;
@@ -230,22 +273,51 @@
 
 
 .about{
-    min-width: 30%;
-    height: 0;  
+    position:absolute;
+    width: 210px;
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .about img {
-    border-left: 5px solid #06585e ;
+    border: 5px solid #000 ;
     filter: opacity(60%);
     transition: 0.5s;
-    /* width: 200px; */
+    z-index: 1;
 }
 
 .about img:hover{
     filter: opacity(90%);
-    border-left: 5px solid rgb(22, 6, 39);
 }
 
+.about::after{
+    content: "";
+    position: absolute;
+    background: #000;
+    inset: 4px;
+}
+.about::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(#c5c5c5, #fff);
+    animation: animate 4s linear infinite;
+   
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 p.text{
     display: block;
     margin-top: 15px;
@@ -338,26 +410,33 @@ p.text{
     font-size: 15px;  
 }
 
-.card .con-text p .btn{
+.btn{
+    width: 20%;
     padding:  7px 17px;
     border-radius: 12px;
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
     margin-top: 10px;
-    margin-left: 170px;
+    margin-right: -40px;
+    margin-left: 45px;
     transition: all .25s ease;
     font-family: poppins;
     font-size: 15px;
     outline: none;
+    visibility: hidden;
+    
 }
 
-.card .con-text p .btn:hover{
+.btn:hover{
     background: #fff;
     color: #000;
     box-shadow: 0px 0px 8px 8px rgb(10 0 0 / 60%);
 }
 
+.card:hover .btn{
+    visibility: visible;
+}
 .hidden{
     opacity: 0;
     display: none;
@@ -416,9 +495,9 @@ p.text{
 
 
   @media (max-width: 1325px) {
-
-    .about img{
-        max-width: 80%;
+    .about{
+        position: relative;
+        display: inline-flex;
         margin-top: -20%;
     }
 
@@ -434,7 +513,7 @@ p.text{
     }
 
     .text-div{
-        margin-top: 20%;
+        margin-top: 10%;
     }
     .section{
         flex-direction: column;
@@ -450,68 +529,9 @@ p.text{
     }
   }
 
-
-  @media (max-width: 1000px) {
-
-    .text-div{
-        margin-top: 25%;
-    }   
-    .principal .scroll {
-        bottom: -5rem;
-    } 
-  }
-
-  @media (max-width: 868px) {
-    
-    .text-div{
-        margin-top: 25%;
-    }
-    .principal .scroll {
-        bottom: -5rem;
-    }
-  }
-
   @media (max-width: 768px) {
     
-    .about img{
-        max-width: 80%;
-    }
-
-    .text-div{
-        margin-top: 50%;
-    }
     .principal .scroll {
         bottom: -5rem;
     }
   }
-
-  @media (max-width: 667px) {
-    .text-div{
-        margin-top: 50%;
-    }
-    .principal .scroll {
-        bottom: -5rem;
-    }
-
-  }
-
-  @media (max-width: 610px) {
-    .text-div{
-        margin-top: 50%;
-    }
-    .principal .scroll {
-        bottom: -5rem;
-    }
-    
-}
-
-@media (max-width: 420px) {
-    .text-div{
-        margin-top: 60%;
-    }
-    .principal .scroll {
-        bottom: -5rem;
-    }
-    
-}
-    

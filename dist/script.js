@@ -14,21 +14,21 @@ navMenu.addEventListener("click", () => {
 });
 
 // See more button
-const bnt = document.querySelector('.see-more');
-const see_more = document.querySelector('.hidden');
+const btn = document.querySelector('.see-more');
+const see_more = document.querySelectorAll('.hidden');
 
-bnt.addEventListener('click', function() {
-     if(see_more.classList.contains('hidden')){
-        see_more.classList.remove('hidden');
-        see_more.classList.add('visible');
-        bnt.innerHTML = 'See less';
-
-     }else{
-        see_more.classList.add('hidden');
-        see_more.classList.remove('visible');
-        bnt.innerHTML = 'See more';
-     }
-
+btn.addEventListener('click', function() {
+    see_more.forEach(function(element) {
+        if(element.classList.contains('hidden')){
+            element.classList.remove('hidden');
+            element.classList.add('visible');
+            btn.innerHTML = 'See less';
+        } else {
+            element.classList.add('hidden');
+            element.classList.remove('visible');
+            btn.innerHTML = 'See more';
+        }
+    });
 });
 
 // Loader

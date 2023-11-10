@@ -357,7 +357,8 @@ p.text{
 
 
 .card {
-    height: 350px;  
+    height: 350px;
+    width: 565px;  
     background-color: #000;
     border-radius: 30px;
     overflow: hidden;

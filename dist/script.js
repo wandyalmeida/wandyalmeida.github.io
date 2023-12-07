@@ -43,8 +43,8 @@ window.addEventListener('load', fadeOut);
 function sendEmail(){
     Email.send({
         SecureToken : "4eb02015-ff65-40b8-9efa-2d0212e511a9",
-        To : 'wandwilson.silva@gmail.com',
-        From : 'wandwilson.silva@gmail.com',
+        To : 'wandwilson.almeida@hotmail.com',
+        From : 'wandwilson.almeida@hotmail.com',
         Subject : "New oportunity",
         Body : "Name: " + document.getElementById("name").value
             + "<br> Email: " + document.getElementById("email").value

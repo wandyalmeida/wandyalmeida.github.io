@@ -44,8 +44,8 @@ function sendEmail(){
     console.log("Email sented")
     Email.send({
         SecureToken : "4eb02015-ff65-40b8-9efa-2d0212e511a9",
-        To : 'wandwilson.almeida@hotmail.com',
-        From : 'wandwilson.almeida@hotmail.com',
+        To : 'wandwilson.silva@gmail.com',
+        From : 'wandwilson.silva@gmail.com',
         Subject : "New oportunity",
         Body : "Name: " + document.getElementById("name").value
             + "<br> Email: " + document.getElementById("email").value

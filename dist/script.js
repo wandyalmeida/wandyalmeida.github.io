@@ -41,6 +41,7 @@ const fadeOut = () => {
 window.addEventListener('load', fadeOut);
 
 function sendEmail(){
+    console.log("Email sented")
     Email.send({
         SecureToken : "4eb02015-ff65-40b8-9efa-2d0212e511a9",
         To : 'wandwilson.almeida@hotmail.com',
@@ -52,6 +53,7 @@ function sendEmail(){
             + "<br> Message: " + document.getElementById("message").value 
         }).then(
             message => alert("Form submission successful!")
+            
             )};
 
 
